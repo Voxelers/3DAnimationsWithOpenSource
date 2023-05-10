@@ -89,13 +89,43 @@ during the workshop.
 
 ## Creating animations in Blender based on the rigging
 
+* Save the blender scene as "basic_anim_rigging.blend"
 * Go to Pose Mode
-* 
+* Select all the bones (a key)
+* Press right-mouse-button->Insert KeyFrame->Location and Rotation
+* Move the skeleton to the final desired position
+* Go to second 5 in the Timeline view (drag it up from the bottom of the main window)
+* Select all the bones (a key)
+* Press right-mouse-button->Insert KeyFrame->Location and Rotation
+* GO to second 1 and copy the keyframes
+* Go to second 10 in the Timeline view and paste the second 1 keyframes
+* Set the tptal duration for the timeline to 10s (100)
+* Save the scene
+* Export it as a glTF 2.0
 
-## Character model in Blender with metaballs
 
 ## Using Blender animation in Godot: Import and coding
-
-## Using Mixamo animations in Godot
+* Add a new scene to Godot with a 3D node and save it as blender_animation
+* Add a camera, the SUN and the World Environment as before
+  * Camera: Position 10, 2, 0 - Rotation: 0, 90, 0
+* Drag and drop the "basic_anim_rigging.glb" file to resources panel (In the FileSystem tab)
+* Drag the file from Godot resource panel to 3D view
+* Add code to the scene so the animation is played
+  * Select the root node and press the paper with a green +
+    * Press the Create button in the modal dialog that appears
+    * In the func _ready() add the code to start the animation
+```
+    func _ready():
+      $basic_anim_rigging/AnimationPlayer.play("ArmatureAction")
+```
+* Press in the Top right second Play button (F6) to start the "game"
+  * You must see the model animated
 
 ## Cinematic Scene Generation
+
+* Godot 
+
+## Using Mixamo animations in Godot
+* MoCap is powerfull to capture animations directly from the real world
+
+## An example Character model in Blender with metaballs
