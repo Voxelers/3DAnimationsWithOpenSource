@@ -53,9 +53,29 @@ during the workshop.
 * Press in the Top right second Play button (F6) to start the "game"
   * You must see the ball falling due to the gravity until it collides with the floor.
 
-## Character model in Blender
+## Character model in Blender basic
+
+* Remove the initial cube
+* Build a basic character with
+  * A sphere as head (use G+)
+    * Add sphere
+    * Move it to Location 0, 0, 6
+  * Cubesgz for
+    * The body
+      * Scale Z to 2 and move to Location 0, 0, 3
+    * The arms
+      * Two boxes
+        * Left arm: Scale 0.3, 1.5, 0.3 - Location 0, 2.5, 4.5
+        * Right arm: Scale 0.3, 1.5, 0.3 - Location 0, -2.5, 4.5
+    * The legs
+      * Two boxes
+        * Left leg: Scale 0.3, 1.5, 0.3 - Location 0, 1.5, 0 - Rotation -45, 0, 0
+        * Right leg: Scale 0.3, 1.5, 0.3 - Location 0, 1.5, 0- Rotation 45, 0, 0
+* Save the blender scene as "basic.blend"
 
 ## Animation rigging in Blender
+
+## Character model in Blender with metaballs
 
 ## Using Blender animation in Godot: Import and coding
 
