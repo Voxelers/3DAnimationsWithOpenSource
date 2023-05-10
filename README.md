@@ -60,7 +60,7 @@ during the workshop.
   * A sphere as head (use G+)
     * Add sphere
     * Move it to Location 0, 0, 6
-  * Cubesgz for
+  * Cubes for
     * The body
       * Scale Z to 2 and move to Location 0, 0, 3
     * The arms
@@ -97,9 +97,9 @@ during the workshop.
 * Go to second 5 in the Timeline view (drag it up from the bottom of the main window)
 * Select all the bones (a key)
 * Press right-mouse-button->Insert KeyFrame->Location and Rotation
-* GO to second 1 and copy the keyframes
+* Go to second 1 and copy the keyframes
 * Go to second 10 in the Timeline view and paste the second 1 keyframes
-* Set the tptal duration for the timeline to 10s (100)
+* Set the total duration for the timeline to 10s (100)
 * Save the scene
 * Export it as a glTF 2.0
 
