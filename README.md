@@ -123,9 +123,15 @@ during the workshop.
 
 ## Cinematic Scene Generation
 
-* Godot 
+* Godot can generate cinematics (video) from the scene
+* Go to Project->Project Settings->Editor->Movie Writer and define where the movie file must be generated (basicRigging.avi)
+* Then select the Film icon (the last one in the top right) and play the scene as usual
 
 ## Using Mixamo animations in Godot
 * MoCap is powerfull to capture animations directly from the real world
+
+
+## Combining scenes
+
 
 ## An example Character model in Blender with metaballs

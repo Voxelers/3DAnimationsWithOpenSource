@@ -14,3 +14,7 @@ config/name="3DAnimationsWithOpenSource"
 run/main_scene="res://workshop.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor]
+
+movie_writer/movie_file="/home/acs/devel/3DAnimationsWithOpenSource/godot/basicRigging.avi"
