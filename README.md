@@ -75,6 +75,23 @@ during the workshop.
 
 ## Animation rigging in Blender
 
+* Save the blender scene as "basic_anim.blend"
+* Add Armature (it adds an initial bone, which is the spine)
+  * Change to Location 0, 0, 1.5 - Scale 3, 3, 3
+* Change to Wireframe view (top right icon with an empty circle with wires) so you can see the armature
+* Change to Edit Mode and create the rest of the skeleton
+  * Select an extreme of the current bone en press "E"
+  * From the upper extreme add 2 bones for the arms and 1 bone for the neck
+  * From the bottom extreme add two bones for the legs
+* Change to object mode and select all the cube for the model using CTRL+left-mouse-button and select also the armature as the last one
+* Press right-mouse-button over the selection and select Parent->Armature deform->With automatic weights
+* Go to Pose mode, select left leg bone, move it, and check that the left leg will also be moved. The bones move also the model.
+
+## Creating animations in Blender based on the rigging
+
+* Go to Pose Mode
+* 
+
 ## Character model in Blender with metaballs
 
 ## Using Blender animation in Godot: Import and coding
