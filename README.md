@@ -134,4 +134,8 @@ during the workshop.
 ## Combining scenes
 
 
+## Adding collision detection
+
+
+
 ## An example Character model in Blender with metaballs
