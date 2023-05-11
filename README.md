@@ -193,13 +193,13 @@ func _ready():
 * Create a cinematic with it
   * Go to Project->Project Settings->Editor->Movie Writer and define where the movie file must be generated (TyFalling.avi)
   * Then select the Film icon (the last one in the top right) and play the scene as usual
+* You can change the bounce property of the floor to simulate it is an elastic bed
 
-  
+
+## Combining several models: A dance party
+ 
 ## Combining scenes
 
-
-## Adding collision detection
-
-
-
 ## An example Character model in Blender with metaballs
+
+## Blending animations
