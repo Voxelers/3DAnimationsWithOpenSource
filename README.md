@@ -245,11 +245,32 @@ func _process(delta):
 * Select the camera node and animate it moving to Position 
   * At 5s to -2, 1.5, 3
   * At 10s to 0, 1.5, 2
-* * Press in the Top right second Play button (F6) to start the "game"
+* Press in the Top right second Play button (F6) to start the "game"
   * You must see four models dancing with the camera approaching the dance
 
 
 ## Combining several models: A dance party with collisions detection
+
+* Let's create a new scene from "dance_moving_camera.tscn", "dance_moving_camera_collision.tscn"
+* The goal is to detect a collision between the two dancers
+  * When they "touch" they must stop dancing
+  * They must rotate so they can look to each other
+* In order to detect the collision let's create two RigidBody3D
+  * Inside each RigidBody3D we move the character, and also we create a CollisionShape3D, box, with the character inside
+  * The CollisionShape3D must be animated to be moved with the characters
+  * In the RigidBody3D we need to activate the Contact Monitor property and change the Max Contacts Reported to 10
+* Connect the RigidBody3D body_entered signal for one of the characters to this code
+```gdscript
+func _on_claire_rigid_body_3d_body_entered(body):
+	if body != $StaticBody3D:
+		print(body)
+		$AnimationPlayer.stop(true)
+		$ClaireRigidBody3D/ClaireDance.rotate_y(deg_to_rad(90))
+		$TuyRigidBody3D/TuyDance.rotate_y(deg_to_rad(-90))
+		$ClaireRigidBody3D/ClaireDance/AnimationPlayer.play("Armature|mixamocom|Layer0")
+		$TuyRigidBody3D/TuyDance/AnimationPlayer.play("Armature|mixamocom|Layer0")
+```
+* When the two characters collide they rotate to look to each other and the dance continues
 
  
 ## Combining scenes

@@ -1,0 +1,236 @@
+[gd_scene load_steps=13 format=3 uid="uid://qgxqugfq2a70"]
+
+[ext_resource type="Script" path="res://dance_moving_camera_with_collision.gd" id="1_a8nxu"]
+[ext_resource type="PackedScene" uid="uid://cnxfyquel36be" path="res://models/ClaireDance.glb" id="2_6ig5y"]
+[ext_resource type="PackedScene" uid="uid://bjrh5is6y5aqh" path="res://models/TuyDance.glb" id="3_dx870"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pe6yk"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_esq12"]
+sky_material = SubResource("ProceduralSkyMaterial_pe6yk")
+
+[sub_resource type="Environment" id="Environment_k3lkh"]
+background_mode = 2
+sky = SubResource("Sky_esq12")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_d0qal"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClaireRigidBody3D/ClaireDance:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3, 0.05, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TuyRigidBody3D/TuyDance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3, 0.05, 2.08165e-12)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.08165e-12, 4, 12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ClaireRigidBody3D/ClaireCollisionShape3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3, 1, 2.08165e-12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TuyRigidBody3D/TuyCollisionShape3D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3, 1, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_kqlli"]
+resource_name = "horizontal"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClaireRigidBody3D/ClaireDance:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-3, 0.05, 2.08165e-12), Vector3(-0.4, 0.05, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TuyRigidBody3D/TuyDance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3, 0.05, 2.08165e-12), Vector3(0.4, 0.05, 2.08165e-12)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(2.08165e-12, 4, 12), Vector3(-2, 1.5, 1), Vector3(1, 1.5, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ClaireRigidBody3D/ClaireCollisionShape3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-3, 1, 2.08165e-12), Vector3(-0.4, 1, 2.08165e-12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TuyRigidBody3D/TuyCollisionShape3D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3, 1, 2.08165e-12), Vector3(0.4, 1, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kiqb3"]
+_data = {
+"RESET": SubResource("Animation_d0qal"),
+"horizontal": SubResource("Animation_kqlli")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_goorg"]
+size = Vector3(1.5, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qktxg"]
+size = Vector3(1.5, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s3hew"]
+size = Vector3(10, 0.1, 10)
+
+[node name="Dance" type="Node3D"]
+script = ExtResource("1_a8nxu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k3lkh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 4, 12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "horizontal"
+libraries = {
+"": SubResource("AnimationLibrary_kiqb3")
+}
+
+[node name="ClaireRigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.08165e-12, 2.08165e-12)
+max_contacts_reported = 10
+contact_monitor = true
+
+[node name="ClaireDance" parent="ClaireRigidBody3D" instance=ExtResource("2_6ig5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.05, 2.08165e-12)
+
+[node name="ClaireCollisionShape3D" type="CollisionShape3D" parent="ClaireRigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 2.08165e-12)
+shape = SubResource("BoxShape3D_goorg")
+
+[node name="TuyRigidBody3D" type="RigidBody3D" parent="."]
+max_contacts_reported = 10
+contact_monitor = true
+
+[node name="TuyDance" parent="TuyRigidBody3D" instance=ExtResource("3_dx870")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.05, 2.08165e-12)
+
+[node name="TuyCollisionShape3D" type="CollisionShape3D" parent="TuyRigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 2.08165e-12)
+shape = SubResource("BoxShape3D_qktxg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
+size = Vector3(10, 0.1, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_s3hew")
+
+[connection signal="body_entered" from="ClaireRigidBody3D" to="." method="_on_claire_rigid_body_3d_body_entered"]
