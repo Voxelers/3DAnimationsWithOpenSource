@@ -42,16 +42,16 @@ All the workshop is covered by this [LICENSE](LICENSE) except [Mixamo](https://h
 ## Animation scene in Godot based on physics
 
 * Save the initial scene as "initial_physics.tscn"
-* Add a StaticBody node to the Root node (Initial)
+* Add a StaticBody3D node to the Root node (Initial)
   * Move inside it the Box
   * Add to this node a CollisionShape3D
-    * In the properties select BoxShape
-      * Click in BoxShape and define the same size as the floor: 10, 1, 10
+    * In the properties select BoxShape3D
+      * Click in BoxShape3D and define the same size as the floor: 10, 1, 10
 * Add a RigidBody3D node to the Root node (Initial)
   * Move inside it the Sphere
   * Add to this node a CollisionShape3D
-    * In the properties select BoxShape
-      * Click in BoxShape and select SphereShape. Position it at 0, 5, 0
+    * In the properties select BoxShape3D
+      * Click in BoxShape3D and select SphereShape. Position it at 0, 5, 0
 * Press in the Top right second Play button (F6) to start the "game"
   * You must see the ball falling due to the gravity until it collides with the floor.
 
@@ -170,8 +170,30 @@ func _ready():
 * Press in the Top right second Play button (F6) to start the "game"
   * You must see the model animated falling
 
+## Add fall animation with floor
 
-  
+* Open in Godot the mixamo_animation_falls scene
+* Save it as mixamo_animation_falls_with_floor
+* Add a floor using the Box (CSGBox3D)
+  * Set the dimensions (Size: 10, 1, 10)
+* Add a StaticBody3D node to the Root node (Mixamo)
+  * Move inside it the Box
+  * Add to this node a CollisionShape3D
+    * In the properties select BoxShape3D
+      * Click in BoxShape3D and define the same size as the floor: 10, 1, 10
+* In the RigidBody3D
+  * Add to this node a CollisionShape3D
+    * In the properties select BoxShape3D
+      * Click in BoxShape3D and define the same size to contain the Ty model: 1, 1, 3
+    * Move it to Position 0, 11, 0 (Ty model must be inside it)
+* Transform the camera to Location  0, 4, 10 - Rotation 0, 0, 0
+* Press in the Top right second Play button (F6) to start the "game"
+  * You must see the model animated falling
+  * When Ty hits (collides) the floor he stopped
+* Create a cinematic with it
+  * Go to Project->Project Settings->Editor->Movie Writer and define where the movie file must be generated (TyFalling.avi)
+  * Then select the Film icon (the last one in the top right) and play the scene as usual
+
   
 ## Combining scenes
 

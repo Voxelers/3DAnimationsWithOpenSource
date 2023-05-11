@@ -17,4 +17,4 @@ config/icon="res://icon.svg"
 
 [editor]
 
-movie_writer/movie_file="/home/acs/devel/3DAnimationsWithOpenSource/godot/basicRigging.avi"
+movie_writer/movie_file="/home/acs/devel/3DAnimationsWithOpenSource/godot/TyFalling.avi"
