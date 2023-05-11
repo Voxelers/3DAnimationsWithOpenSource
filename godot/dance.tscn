@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cnxfyquel36be" path="res://models/ClaireDance.glb" id="1_egny8"]
 [ext_resource type="Script" path="res://dance.gd" id="1_wakgi"]
-[ext_resource type="PackedScene" path="res://models/TuyDance.glb" id="2_xcsr0"]
+[ext_resource type="PackedScene" uid="uid://bjrh5is6y5aqh" path="res://models/TuyDance.glb" id="2_xcsr0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pe6yk"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,6 +16,33 @@ background_mode = 2
 sky = SubResource("Sky_esq12")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_d0qal"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClaireDance:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3, 0.05, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TuyDance:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3, 0.05, 2.08165e-12)]
+}
 
 [sub_resource type="Animation" id="Animation_kqlli"]
 resource_name = "horizontal"
@@ -43,33 +70,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(3, 0.05, 2.08165e-12), Vector3(1, 0.05, 2.08165e-12)]
-}
-
-[sub_resource type="Animation" id="Animation_d0qal"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ClaireDance:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-3, 0.05, 2.08165e-12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TuyDance:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(3, 0.05, 2.08165e-12)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kiqb3"]

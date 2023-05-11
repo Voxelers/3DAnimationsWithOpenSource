@@ -163,7 +163,7 @@ All the workshop is covered by this [LICENSE](LICENSE) except [Mixamo](https://h
 * Add a RigidBody3D node to the Root node (Mixamo)
   * Move inside it the Falling node
 * Change the scene code to
-```
+```gdscript
 func _ready():
     $RigidBody3D/Falling/AnimationPlayer.play("Armature|mixamocom|Layer0")
 ```
@@ -197,6 +197,57 @@ func _ready():
 
 
 ## Combining several models: A dance party
+
+* Create a new scene and save it as "dance.tscn", and add the flor of the previous scenes but with 0.1 for y size
+* Import in the Godot project the models "ClaireDance" and "TuyDance" from the repository mixano folder
+  * Position ClaireDance model at -3, 0.05, 0
+  * Position TuyDance model at 3, 0.05, 0
+* Add the AnimationPlayer node create a new animation with for 10s:
+  * "ClaireDance" moving from its original position to 1, 0.05, 0 (only x changes) 
+  * "TuyDance" moving from its original position to 1, 0.05, 0 (only x changes)
+* Change the scene code to
+```gdscript
+extends Node3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$ClaireDance/AnimationPlayer.play("Armature|mixamocom|Layer0")
+	$TuyDance/AnimationPlayer.play("Armature|mixamocom|Layer0")
+	
+	var newTuy = $TuyDance.duplicate()
+	var newClaire = $ClaireDance.duplicate()
+	
+	newTuy.position = Vector3(0, 0, -2)
+	newTuy.find_child('AnimationPlayer').play("Armature|mixamocom|Layer0")
+	newClaire.position = Vector3(0, 0, 2)
+	newClaire.find_child('AnimationPlayer').play("Armature|mixamocom|Layer0")
+	
+	var danceRoot = get_node(".")
+	danceRoot.add_child(newClaire)
+	danceRoot.add_child(newTuy)
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+```
+* Press in the Top right second Play button (F6) to start the "game"
+  * You must see four models dancing
+
+## Combining several models: A dance party with moving camera
+
+* Save the "dance.tscn" scene as "dance_moving_camera.tscn"
+* Remove the script selecting the root node and pressing the paper icon with a red cross
+* Add a new script pressing the paper icon with a green plus
+  * Save ths script with the name "dance_moving_camera.gd"
+  * Copy the "dance.gd" contents to "dance_moving_camera.gd"
+* Select the camera node and animate it moving to Position 
+  * At 5s to -2, 1.5, 3
+  * At 10s to 0, 1.5, 2
+* * Press in the Top right second Play button (F6) to start the "game"
+  * You must see four models dancing with the camera approaching the dance
+
  
 ## Combining scenes
 
