@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cxgbrdjdh3v0d"]
 
-[ext_resource type="Script" path="res://mixamo_animation.gd" id="1_22lep"]
+[ext_resource type="Script" path="res://mixamo_animation_falls_with_floor.gd" id="1_4lemc"]
 [ext_resource type="PackedScene" uid="uid://cmhrcg5gmv244" path="res://Falling.glb" id="2_md3rq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ubgan"]
@@ -23,7 +23,7 @@ size = Vector3(1, 1, 3)
 size = Vector3(10, 1, 10)
 
 [node name="Mixamo" type="Node3D"]
-script = ExtResource("1_22lep")
+script = ExtResource("1_4lemc")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_707vf")

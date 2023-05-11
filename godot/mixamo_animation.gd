@@ -3,9 +3,9 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    $RigidBody3D/Falling/AnimationPlayer.play("Armature|mixamocom|Layer0") # Replace with function body.
+	$Falling/AnimationPlayer.play("Armature|mixamocom|Layer0") # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-    pass
+	pass

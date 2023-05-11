@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0lscb05lbexx"
-path.s3tc="res://.godot/imported/Falling_Boy_Shoes_diffuse.png-a673ca05fe745596a409dc11c5ec43c5.s3tc.ctex"
+path.etc2="res://.godot/imported/Falling_Boy_Shoes_diffuse.png-a673ca05fe745596a409dc11c5ec43c5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Falling_Boy_Shoes_diffuse.png"
-dest_files=["res://.godot/imported/Falling_Boy_Shoes_diffuse.png-a673ca05fe745596a409dc11c5ec43c5.s3tc.ctex"]
+dest_files=["res://.godot/imported/Falling_Boy_Shoes_diffuse.png-a673ca05fe745596a409dc11c5ec43c5.etc2.ctex"]
 
 [params]
 

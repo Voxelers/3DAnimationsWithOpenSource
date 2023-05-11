@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk6t8anljhfao"
-path.s3tc="res://.godot/imported/Falling_Boy_Hair_diffuse.png-3ae4fd5b2d59ead909caaf290da9328b.s3tc.ctex"
+path.etc2="res://.godot/imported/Falling_Boy_Hair_diffuse.png-3ae4fd5b2d59ead909caaf290da9328b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Falling_Boy_Hair_diffuse.png"
-dest_files=["res://.godot/imported/Falling_Boy_Hair_diffuse.png-3ae4fd5b2d59ead909caaf290da9328b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Falling_Boy_Hair_diffuse.png-3ae4fd5b2d59ead909caaf290da9328b.etc2.ctex"]
 
 [params]
 

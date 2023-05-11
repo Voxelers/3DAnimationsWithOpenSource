@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://3nisui443y1y"]
 
-[ext_resource type="Script" path="res://mixamo_animation.gd" id="1_xy7c6"]
+[ext_resource type="Script" path="res://mixamo_animation_falls_with_floor.gd" id="1_lgvd6"]
 [ext_resource type="PackedScene" uid="uid://cmhrcg5gmv244" path="res://Falling.glb" id="2_iqw8x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ubgan"]
@@ -17,7 +17,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Mixamo" type="Node3D"]
-script = ExtResource("1_xy7c6")
+script = ExtResource("1_lgvd6")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_707vf")

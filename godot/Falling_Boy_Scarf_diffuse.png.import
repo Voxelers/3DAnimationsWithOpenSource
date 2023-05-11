@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn61tcgoxmp4a"
-path.s3tc="res://.godot/imported/Falling_Boy_Scarf_diffuse.png-beb6bef9f07269085185d9d7d8f0313b.s3tc.ctex"
+path.etc2="res://.godot/imported/Falling_Boy_Scarf_diffuse.png-beb6bef9f07269085185d9d7d8f0313b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Falling_Boy_Scarf_diffuse.png"
-dest_files=["res://.godot/imported/Falling_Boy_Scarf_diffuse.png-beb6bef9f07269085185d9d7d8f0313b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Falling_Boy_Scarf_diffuse.png-beb6bef9f07269085185d9d7d8f0313b.etc2.ctex"]
 
 [params]
 
