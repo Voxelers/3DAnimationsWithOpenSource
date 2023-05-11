@@ -248,6 +248,9 @@ func _process(delta):
 * * Press in the Top right second Play button (F6) to start the "game"
   * You must see four models dancing with the camera approaching the dance
 
+
+## Combining several models: A dance party with collisions detection
+
  
 ## Combining scenes
 
