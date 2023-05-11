@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://3nisui443y1y"]
+
+[ext_resource type="Script" path="res://mixamo_animation.gd" id="1_xy7c6"]
+[ext_resource type="PackedScene" uid="uid://cmhrcg5gmv244" path="res://Falling.glb" id="2_iqw8x"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ubgan"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_rnovj"]
+sky_material = SubResource("ProceduralSkyMaterial_ubgan")
+
+[sub_resource type="Environment" id="Environment_707vf"]
+background_mode = 2
+sky = SubResource("Sky_rnovj")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Mixamo" type="Node3D"]
+script = ExtResource("1_xy7c6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_707vf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="Falling" parent="RigidBody3D" instance=ExtResource("2_iqw8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)

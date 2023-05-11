@@ -130,14 +130,49 @@ All the workshop is covered by this [LICENSE](LICENSE) except [Mixamo](https://h
 * Then select the Film icon (the last one in the top right) and play the scene as usual
 
 ## Using Mixamo animations in Godot
+
 * MoCap is powerfull to capture animations directly from the real world
   * Mixamo is a sample of it. The characters and animations are royalty free for personal, commercial, and non-profit projects ([FAQ](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html)). Free as a beer.
   * Auto-rigger and animation libraries are for bipedal humanoids only.
 * Go to https://www.mixamo.com/#/, create an account, select a character and an animation and download it
-  * Use Ty character with Failing animation
+  * Use Ty character with Falling animation
   * Press Download button and use the default config (FBX format)
+* Open Blender, remove the cube, import the Falling.fbx and export it as a glTF 2.0
+* Open Godot project
+  * Add a new scene to Godot with a 3D node and save it as mixamo_animation
+  * Drag and drop the "Falling.glb" file to resources panel (In the FileSystem tab)
+  * Drag and drop the file "Falling.glb" from Godot resource panel to 3D view
+    * Position at 0, 10, 0
+  * Add a camera, the SUN and the World Environment as before
+    * Camera: Position 0, 0, 0 - Rotation: 90, 0, 0
+  * Add code to the scene so the animation is played
+    * Select the root node and press the paper with a green +
+      * Press the Create button in the modal dialog that appears
+      * In the func _ready() add the code to start the animation
+```
+  func _ready():
+    $Falling/AnimationPlayer.play("Armature|mixamocom|Layer0")
+```
+  * Press in the Top right second Play button (F6) to start the "game"
+    * You must see the model animated
+
+## Add fall animation
+
+* Open in Godot the mixamo_animation scene
+* Save it as mixamo_animation_falls
+* Add a RigidBody3D node to the Root node (Mixamo)
+  * Move inside it the Falling node
+* Change the scene code to
+```
+func _ready():
+    $RigidBody3D/Falling/AnimationPlayer.play("Armature|mixamocom|Layer0")
+```
+* Press in the Top right second Play button (F6) to start the "game"
+  * You must see the model animated falling
 
 
+  
+  
 ## Combining scenes
 
 
