@@ -1,4 +1,4 @@
-# 3D Animations with Open Source
+# 3D Animations with Open Source Workshop
 
 In this repository you will find the Godot and Blender files that will be used
 during the workshop.
