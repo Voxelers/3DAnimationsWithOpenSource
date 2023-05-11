@@ -6,6 +6,8 @@ during the workshop.
 * [Workshop description](https://propuestas.eslib.re/2023/talleres/3d-animations-open-source)
 * [Workshop slides](https://docs.google.com/presentation/d/1eVEjve3vur9weagTb7OHAgxgwp4cCMC-4seDLhxwhcU/edit#slide=id.p)
 
+All the workshop is covered by this [LICENSE](LICENSE) except [Mixamo](https://helpx.adobe.com/es/creative-cloud/faq/mixamo-faq.html) &copy; contents which are free to use.
+
 ## Initial scene in Godot
 
 * Start from the empty 3D world
@@ -129,6 +131,11 @@ during the workshop.
 
 ## Using Mixamo animations in Godot
 * MoCap is powerfull to capture animations directly from the real world
+  * Mixamo is a sample of it. The characters and animations are royalty free for personal, commercial, and non-profit projects ([FAQ](https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html)). Free as a beer.
+  * Auto-rigger and animation libraries are for bipedal humanoids only.
+* Go to https://www.mixamo.com/#/, create an account, select a character and an animation and download it
+  * Use Ty character with Failing animation
+  * Press Download button and use the default config (FBX format)
 
 
 ## Combining scenes
