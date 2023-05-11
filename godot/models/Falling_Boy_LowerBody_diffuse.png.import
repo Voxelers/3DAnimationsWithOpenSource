@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnio2o0hlid7c"
-path.etc2="res://.godot/imported/Falling_Boy_Head_diffuse.png-90081ef163ded762ae41360abd84c564.etc2.ctex"
+uid="uid://bsm7grk1xuyyv"
+path.etc2="res://.godot/imported/Falling_Boy_LowerBody_diffuse.png-c2c3984515b0bfa01a9b8cb5a1999157.etc2.ctex"
 metadata={
 "imported_formats": ["etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Falling_Boy_Head_diffuse.png"
-dest_files=["res://.godot/imported/Falling_Boy_Head_diffuse.png-90081ef163ded762ae41360abd84c564.etc2.ctex"]
+source_file="res://models/Falling_Boy_LowerBody_diffuse.png"
+dest_files=["res://.godot/imported/Falling_Boy_LowerBody_diffuse.png-c2c3984515b0bfa01a9b8cb5a1999157.etc2.ctex"]
 
 [params]
 

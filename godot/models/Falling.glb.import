@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfyrw5pohyuis"
-path="res://.godot/imported/basic_anim_rigging.glb-6845801160adfaa26aa9bac63b0989b8.scn"
+uid="uid://cmhrcg5gmv244"
+path="res://.godot/imported/Falling.glb-a1df6d542839d17b2c1c3dcdab196b8b.scn"
 
 [deps]
 
-source_file="res://basic_anim_rigging.glb"
-dest_files=["res://.godot/imported/basic_anim_rigging.glb-6845801160adfaa26aa9bac63b0989b8.scn"]
+source_file="res://models/Falling.glb"
+dest_files=["res://.godot/imported/Falling.glb-a1df6d542839d17b2c1c3dcdab196b8b.scn"]
 
 [params]
 

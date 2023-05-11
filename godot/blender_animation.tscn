@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdjobdaolpgm1"]
+[gd_scene load_steps=6 format=3 uid="uid://bwr38ynnjtjc1"]
 
-[ext_resource type="Script" path="res://blender_animation.gd" id="1_k6rsy"]
-[ext_resource type="PackedScene" uid="uid://bfyrw5pohyuis" path="res://basic_anim_rigging.glb" id="1_uqlt7"]
+[ext_resource type="Script" path="res://scripts/blender_animation.gd" id="1_fi1ns"]
+[ext_resource type="PackedScene" uid="uid://bfyrw5pohyuis" path="res://models/basic_anim_rigging.glb" id="1_uqlt7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_77y22"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,7 +17,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_k6rsy")
+script = ExtResource("1_fi1ns")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kmwsn")

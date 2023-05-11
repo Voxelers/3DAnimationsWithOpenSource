@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://3nisui443y1y"]
+[gd_scene load_steps=6 format=3 uid="uid://s84qa6af85ui"]
 
-[ext_resource type="Script" path="res://mixamo_animation_falls_with_floor.gd" id="1_lgvd6"]
-[ext_resource type="PackedScene" uid="uid://cmhrcg5gmv244" path="res://Falling.glb" id="2_iqw8x"]
+[ext_resource type="Script" path="res://scripts/mixamo_animation_falls_with_floor.gd" id="1_lgvd6"]
+[ext_resource type="PackedScene" uid="uid://cmhrcg5gmv244" path="res://models/Falling.glb" id="2_iqw8x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ubgan"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
